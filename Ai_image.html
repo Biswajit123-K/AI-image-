@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI image</title>
+    <link rel="stylesheet" href="Ai_image.css">
+</head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<body>
+    <!-- main container -->
+    <div class="main_container"> 
+        <!-- title -->
+<h1 class="title">
+    AI Image Generator
+</h1>
+<!-- form and image section -->
+ <div class="form_section">
+    <div class="form_container">
+<textarea class="input_msg" placeholder="Describe your image ........" id="prompt"></textarea>
+<div class="dropdown_container">
+    <select id="dropdown-style" class="dropdown">
+        <option value="realistic">Realistic</option>
+        <option value="anime">Anime</option>
+        <option value="flux-schnell">Flux-Schnell</option>
+    </select>
+    <select id="dropdown-ratio" class="dropdown">
+        <option value="1:1">1:1</option>
+        <option value="16:9">16:9</option>
+        <option value="9:16">9:16</option>
+    </select>
+</div>
+<!-- generate button -->
+ <div class="gen_button">
+    <button onclick="generateimg()">Generate Image</button>
+     </div>
+    </div>
+ 
+<!-- problem start from this line -->
+    <section class="img_container" id="img_cont">
+<!-- image  -->
+
+ <img src="images.jpeg" id="img_result">
+
+<!-- img download btn -->
+  <!-- <button class="img_download">
+<i class="fa-solid fa-download"></i>
+  </button> -->
+ <!-- spinner container -->
+  <div class="spineer">
+    
+    <svg id="img_spin"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><radialGradient id="a12" cx=".66" fx=".66" cy=".3125" fy=".3125" gradientTransform="scale(1.5)"><stop offset="0" stop-color="#1325FF"></stop><stop offset=".3" stop-color="#1325FF" stop-opacity=".9"></stop><stop offset=".6" stop-color="#1325FF" stop-opacity=".6"></stop><stop offset=".8" stop-color="#1325FF" stop-opacity=".3"></stop><stop offset="1" stop-color="#1325FF" stop-opacity="0"></stop></radialGradient><circle transform-origin="center" fill="none" stroke="url(#a12)" stroke-width="18" stroke-linecap="round" stroke-dasharray="200 1000" stroke-dashoffset="0" cx="100" cy="100" r="70"><animateTransform type="rotate" attributeName="transform" calcMode="spline" dur="2" values="360;0" keyTimes="0;1" keySplines="0 0 1 1" repeatCount="indefinite"></animateTransform></circle><circle transform-origin="center" fill="none" opacity=".2" stroke="#1325FF" stroke-width="18" stroke-linecap="round" cx="100" cy="100" r="70"></circle></svg>
+<span >Generating Image....</span>
+</div>
+ 
+    </section>
+ </div>
+    </div>
+    <script src="img_api.js"></script>
+</body>
+</html>
